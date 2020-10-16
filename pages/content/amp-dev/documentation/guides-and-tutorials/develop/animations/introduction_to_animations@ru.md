@@ -260,8 +260,8 @@ author: CrystalOnScript
   </div>
 </body>
 ```
-
-[/example] This example works by:
+[/example]
+This example works by:
 
 - Объявление переменной `--duration` и присвоение ей значения двух секунд.
 - Sets the `duration` to the var `--duration`'s value.
@@ -339,7 +339,7 @@ author: CrystalOnScript
     }
   </script>
 </amp-animation>
-    
+
   <div class="rain">
     <div class="drop"></div>
     <div class="drop right"></div>
@@ -353,5 +353,4 @@ author: CrystalOnScript
   <button on="tap:mediaAnimation.start">Start</button>
 </body>
 ```
-
 [/example]
