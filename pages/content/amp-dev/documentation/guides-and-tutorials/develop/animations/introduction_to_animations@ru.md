@@ -53,7 +53,9 @@ author: CrystalOnScript
 
 Хотя CSS позволяет вам переходить из одного состояния в другое с помощью переходов, вы должны объявить свойства анимации как ключевые кадры для реализации [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) (аналогично [CSS-анимации](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) ). Чтобы обеспечить плавное воспроизведение и кроссбраузерную совместимость, [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) [ограничивает то, какие свойства ключевых кадров](../../../../documentation/components/reference/amp-animation.md#allow-listed-properties-for-keyframes) можно использовать для свойств с ускорением графического процессора, которые не вызывают перепланировку и могут анимироваться в [потоке композитора](https://dev.chromium.org/developers/design-documents/compositor-thread-architecture) . Это предотвращает вмешательство анимации в AMP и [процесс рендеринга](https://developers.google.com/web/updates/2018/09/inside-browser-part3#javascript_can_block_the_parsing) браузера.
 
-[tip type="note"] Ключевые кадры либо определены непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) либо на них имеются ссылки из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) если они соответствуют ограничениям свойств. Подробнее [о ключевых кадрах в `amp-animation`](../../../../documentation/components/reference/amp-animation.md#keyframes) . [/tip]
+[tip type="note"]
+Ключевые кадры либо определены непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) либо на них имеются ссылки из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) если они соответствуют ограничениям свойств. Подробнее [о ключевых кадрах в `amp-animation`](../../../../documentation/components/reference/amp-animation.md#keyframes) .
+[/tip]
 
 ### Вызывать
 
