@@ -89,7 +89,6 @@ author: CrystalOnScript
 Элементы одного и того же тега или класса могут иметь указанные временные свойства и переопределять значения переменных, определенных в анимации верхнего уровня.
 
 [example preview="top-frame" playground="true" imports="amp-animation"]
-
 ```html
 <body>
   <h1>Hello World!</h1>
@@ -122,7 +121,6 @@ author: CrystalOnScript
   </button>
 </body>
 ```
-
 [/example]
 
 ### Цепные анимации
@@ -214,7 +212,6 @@ author: CrystalOnScript
 Используя [выражения `var()` и `calc()`](../../../../documentation/components/reference/amp-animation.md) вместе с [расширениями CSS](../../../../documentation/components/reference/amp-animation.md#css-extensions) , вы можете писать сложные и синхронизированные анимации, которые работают с любым количеством элементов. Это позволяет легко и плавно анимировать динамические и пользовательские данные.
 
 [example preview="top-frame" playground="true"]
-
 ```html
 <head>
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
@@ -281,7 +278,6 @@ This example works by:
 Анимация может включать [`conditions`](../../../../documentation/components/reference/amp-animation.md#conditions) , позволяющие настраивать эффекты. Адаптируйте анимацию к любому размеру экрана с помощью [условия `media`](../../../../documentation/components/reference/amp-animation.md#media-query) и поддерживает обратную совместимость с браузером, включив [условия `supports`](../../../../documentation/components/reference/amp-animation.md#supports-condition) в операторе [`switch`](../../../../documentation/components/reference/amp-animation.md#animation-switch-statement) .
 
 [example preview="top-frame" playground="true"]
-
 ```html
 <head>
  <style amp-custom>
