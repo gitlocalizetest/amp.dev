@@ -1,10 +1,10 @@
 ---
-$title: Введение в сложные анимации
-$order: 2
+"$title": Введение в сложные анимации
+"$order": '2'
 description: Для анимации, которой нельзя управлять путем добавления и удаления классов, AMP предлагает несколько компонентов, специфичных для анимации. Эти компоненты применяют принципы AMP к анимации ...
 formats:
-  - websites
-  - ads
+- веб-сайты
+- Объявления
 author: CrystalOnScript
 ---
 
@@ -53,9 +53,7 @@ author: CrystalOnScript
 
 Хотя CSS позволяет вам переходить из одного состояния в другое с помощью переходов, вы должны объявить свойства анимации как ключевые кадры для реализации [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) (аналогично [CSS-анимации](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) ). Чтобы обеспечить плавное воспроизведение и кроссбраузерную совместимость, [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) [ограничивает то, какие свойства ключевых кадров](../../../../documentation/components/reference/amp-animation.md#allow-listed-properties-for-keyframes) можно использовать для свойств с ускорением графического процессора, которые не вызывают перепланировку и могут анимироваться в [потоке композитора](https://dev.chromium.org/developers/design-documents/compositor-thread-architecture) . Это предотвращает вмешательство анимации в AMP и [процесс рендеринга](https://developers.google.com/web/updates/2018/09/inside-browser-part3#javascript_can_block_the_parsing) браузера.
 
-[tip type="note"]
-Ключевые кадры либо определены непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) либо на них имеются ссылки из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) если они соответствуют ограничениям свойств. Подробнее [о ключевых кадрах в `amp-animation`](../../../../documentation/components/reference/amp-animation.md#keyframes) .
-[/tip]
+[tip type="note"] Ключевые кадры либо определены непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) либо на них имеются ссылки из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) если они соответствуют ограничениям свойств. Подробнее [о ключевых кадрах в `amp-animation`](../../../../documentation/components/reference/amp-animation.md#keyframes) . [/tip]
 
 ### Вызывать
 
@@ -89,6 +87,7 @@ author: CrystalOnScript
 Элементы одного и того же тега или класса могут иметь указанные временные свойства и переопределять значения переменных, определенных в анимации верхнего уровня.
 
 [example preview="top-frame" playground="true" imports="amp-animation"]
+
 ```html
 <body>
   <h1>Hello World!</h1>
@@ -121,6 +120,7 @@ author: CrystalOnScript
   </button>
 </body>
 ```
+
 [/example]
 
 ### Цепные анимации
@@ -212,6 +212,7 @@ author: CrystalOnScript
 Используя [выражения `var()` и `calc()`](../../../../documentation/components/reference/amp-animation.md) вместе с [расширениями CSS](../../../../documentation/components/reference/amp-animation.md#css-extensions) , вы можете писать сложные и синхронизированные анимации, которые работают с любым количеством элементов. Это позволяет легко и плавно анимировать динамические и пользовательские данные.
 
 [example preview="top-frame" playground="true"]
+
 ```html
 <head>
   <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
@@ -259,8 +260,8 @@ author: CrystalOnScript
   </div>
 </body>
 ```
-[/example]
-This example works by:
+
+[/example] This example works by:
 
 - Объявление переменной `--duration` и присвоение ей значения двух секунд.
 - Sets the `duration` to the var `--duration`'s value.
@@ -278,6 +279,7 @@ This example works by:
 Анимация может включать [`conditions`](../../../../documentation/components/reference/amp-animation.md#conditions) , позволяющие настраивать эффекты. Адаптируйте анимацию к любому размеру экрана с помощью [условия `media`](../../../../documentation/components/reference/amp-animation.md#media-query) и поддерживает обратную совместимость с браузером, включив [условия `supports`](../../../../documentation/components/reference/amp-animation.md#supports-condition) в операторе [`switch`](../../../../documentation/components/reference/amp-animation.md#animation-switch-statement) .
 
 [example preview="top-frame" playground="true"]
+
 ```html
 <head>
  <style amp-custom>
@@ -337,7 +339,7 @@ This example works by:
     }
   </script>
 </amp-animation>
-
+    
   <div class="rain">
     <div class="drop"></div>
     <div class="drop right"></div>
@@ -351,4 +353,5 @@ This example works by:
   <button on="tap:mediaAnimation.start">Start</button>
 </body>
 ```
+
 [/example]
