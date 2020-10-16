@@ -3,8 +3,8 @@
 "$order": '2'
 description: Для анимации, которой нельзя управлять путем добавления и удаления классов, AMP предлагает несколько компонентов, специфичных для анимации. Эти компоненты применяют принципы AMP к анимации ...
 formats:
-- веб-сайты
-- Объявления
+- websites
+- ads
 author: CrystalOnScript
 ---
 
@@ -339,7 +339,7 @@ author: CrystalOnScript
     }
   </script>
 </amp-animation>
-    
+
   <div class="rain">
     <div class="drop"></div>
     <div class="drop right"></div>
