@@ -123,8 +123,8 @@ amp.dev построен с использованием AMP! Поэтому н�
 <pre>&lsqb;tip type="default"]<br>Default tip<br>[/tip]</pre>
 </div>
 
-[tip type="important"] Важно [/tip]
+&lsqb;tip type="important"] Важно [/tip]
 
-[tip type="note"] Примечание [/tip]
+&lsqb;tip type="note"] Примечание [/tip]
 
-[tip type="read-on"] Продолжение чтения [/tip]
+&lsqb;tip type="read-on"] Продолжение чтения [/tip]
