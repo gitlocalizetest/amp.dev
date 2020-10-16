@@ -140,14 +140,6 @@ amp.dev построен с использованием AMP! Поэтому н�
 <pre>```html<br>  // code sample<br>```</pre>
 </div>
 
-```css
-  // code sample
-```
-
-```js
-  // code sample
-```
-
 
 
 
