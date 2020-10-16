@@ -97,17 +97,3 @@ amp.dev построен с использованием AMP! Поэтому н�
 <div class="ap-m-code-snippet">
 <pre>{{ image('/static/img/docs/tutorials/custom-javascript-tutorial/image1.jpg', 500, 369, layout='intrinsic', alt='Image of basic amp script tutorial starter app') }}</pre>
 </div>
-
-## Фильтрация разделов
-
-Некоторые документы могут иметь отношение к нескольким форматам AMP, но для некоторых форматов может потребоваться дополнительное объяснение или информация, не относящаяся к другим. Вы можете отфильтровать эти разделы, заключив их в следующий шорткод.
-
-<div class="ap-m-code-snippet">
-<pre>&lsqb;filter formats="websites"]<br>This is only visible for [websites](?format=websites).<br>&lsqb;/filter]</pre>
-</div>
-
-[filter formats="websites"] Это видно только для [веб-сайтов](?format=websites) . [/filter]
-
-[filter formats="websites, email"] Это видно для [веб-сайтов](?format=websites) и [электронной почты](?format=email) . [/filter]
-
-[filter formats="stories"] Это видно для [историй](?format=stories) . [/filter]
