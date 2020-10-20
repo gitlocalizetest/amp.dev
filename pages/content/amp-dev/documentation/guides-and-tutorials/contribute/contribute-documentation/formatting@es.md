@@ -10,7 +10,7 @@ formats:
 author: CrystalOnScript
 ---
 
-Las guías y tutoriales se presentan en [Markdown](https://www.markdownguide.org/), con un texto preliminar adicional y formato en código corto.
+Las guías HELLO y tutoriales se presentan en [Markdown](https://www.markdownguide.org/), con un texto preliminar adicional y formato en código corto.
 
 ## Ubicación de la documentación
 
