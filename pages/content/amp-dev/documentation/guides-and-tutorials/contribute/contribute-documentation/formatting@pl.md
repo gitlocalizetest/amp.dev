@@ -187,9 +187,15 @@ W przypadku treści wiadomości e-mail z linkami do zasobów, użyj w źródle s
 
 Oto prosta próbka osadzenia kodu inline. Możesz definiować CSS za pomocą stylów inline:
 
-<div class="ap-m-code-snippet">
-<pre>  [example preview="inline" playground="true"]<br>    ```html<br>    <div style="background: red; width: 200px; height: 200px;">Hello World</div><br>    ```<br>  [/example]<br>  [/example]</pre>
+<div class="ap-m-code-snippet"><pre>
+  &#91;example preview="inline" playground="true"]
+    ```html
+    &lt;div style=&quot;background: red; width: 200px; height: 200px;&quot;&gt;Hello World&lt;/div&gt;
+    ```
+  &#91;/example]
+  [/example]</pre>
 </div>
+
 
 Wygląda to tak:
 
