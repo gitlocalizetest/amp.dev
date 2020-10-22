@@ -1,27 +1,27 @@
 ---
-"$title": Введение в сложные анимации
-"$order": '2'
-description: Для анимации, которой нельзя управлять путем добавления и удаления классов, AMP предлагает несколько компонентов, специфичных для анимации. Эти компоненты применяют принципы AMP к анимации ...
+$title: Введение в сложные анимации
+$order: 2
+description: "AMP предлагает несколько компонентов, предназначенных специально для анимации, — это позволяет использовать анимацию, которая не может управляться добавлением и удалением классов. В работе с анимацией эти компоненты применяют принципы AMP:..."
 formats:
 - websites
 - ads
 author: CrystalOnScript
 ---
 
-Для анимаций, которые нельзя управлять путем [добавления и удаления классов](triggering_css_animations.md) , AMP предлагает несколько компонентов, специфичных для анимации. Эти компоненты применяют принципы AMP к анимации: они быстрые, эффективные и ориентированные на пользователя. AMP ограничивает допустимые свойства CSS внутри ключевых кадров, но предоставляет такие преимущества, как детальное управление, бесшовную анимацию и кроссбраузерную совместимость без дополнительной работы.
+AMP предлагает несколько компонентов, предназначенных специально для анимации, — это позволяет использовать анимацию, которая не может управляться [добавлением и удалением классов](triggering_css_animations.md). В работе с анимацией эти компоненты применяют принципы AMP: они быстрые, эффективные и с фокусом на пользователя. AMP ограничивает разрешенные свойства CSS внутри ключевых кадров, но предоставляет такие преимущества, как детальное управление, плавная (бесшовная) анимация и кросс-браузерная совместимость, без дополнительных действий.
 
-Используйте amp-animation, если вам нужно жестко контролировать воспроизведение, а также иметь точную синхронизацию с одновременной анимацией нескольких элементов.
+Используйте компонент amp-animation, если вам нужен жесткий контроль над воспроизведением, а также точная синхронизация нескольких анимируемых элементов.
 
-## Создание базовой анимации AMP
+## Создание базовой AMP-анимации
 
 Компонент [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) позволяет использовать [API веб-анимации](https://www.w3.org/TR/web-animations/) в AMP.
 
-Базовая [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) - это объект JSON, состоящий из следующих основных частей:
+Базовый [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) — это объект JSON, состоящий из следующих ключевых частей:
 
-- Элемент, который компонент анимирует, или `selector` .
-- [Временные свойства](../../../../documentation/components/reference/amp-animation.md#timing-properties)
+- Элемент, который анимируется компонентом, или `selector`.
+- [Свойства воспроизведения](../../../../documentation/components/reference/amp-animation.md#timing-properties)
 - [Ключевые кадры](../../../../documentation/components/reference/amp-animation.md#keyframes)
-- [Вызывать](../../../../documentation/components/reference/amp-animation.md#triggering-animation)
+- [Триггер](../../../../documentation/components/reference/amp-animation.md#triggering-animation)
 
 ```
 <amp-animation layout="nodisplay" id="exampleAnimation">
@@ -39,27 +39,27 @@ author: CrystalOnScript
 <button on="tap:exampleAnimation.start">
 ```
 
-### Селектор
+### Selector
 
-Как и CSS, компонент [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) связывает свойства анимации с элементом, объявляя имя тега, класс или идентификатор элемента в поле `"selector"` . Компонент анимирует каждый элемент с объявленным типом тега или именем класса. Используйте идентификатор, чтобы гарантировать анимацию одного элемента.
+Подобно CSS, компонент [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) связывает свойства анимации с элементом, объявляя имя тега, класс или идентификатор элемента в поле `"selector"`. Компонент анимирует все элементы с объявленным типом тега или именем класса. Если важно анимировать только один элемент, используйте атрибут id.
 
-### Свойства времени
+### Cвойства воспроизведения
 
-[Свойства синхронизации](../../../../documentation/components/reference/amp-animation.md#timing-properties) определяют, сколько времени занимает анимация, сколько раз она воспроизводится и какие ключевые кадры направления выполняются.
+[Свойства воспроизведения](../../../../documentation/components/reference/amp-animation.md#timing-properties) определяют, сколько времени длится анимация, сколько раз она воспроизводится и в каком направлении выполняются ключевые кадры.
 
-Свойства времени не требуются, но анимация может не запускаться, если отсутствуют свойства, связанные со временем и отображением, например `duration` и `fill` .
+Эти свойства не являются обязательными, но анимация может не работать при отсутствии свойств, относящихся к продолжительности и режиму отображения, таких как `duration` и `fill`.
 
 ### Ключевые кадры
 
-Хотя CSS позволяет вам переходить из одного состояния в другое с помощью переходов, вы должны объявить свойства анимации как ключевые кадры для реализации [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) (аналогично [CSS-анимации](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations) ). Чтобы обеспечить плавное воспроизведение и кроссбраузерную совместимость, [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) [ограничивает то, какие свойства ключевых кадров](../../../../documentation/components/reference/amp-animation.md#allow-listed-properties-for-keyframes) можно использовать для свойств с ускорением графического процессора, которые не вызывают перепланировку и могут анимироваться в [потоке композитора](https://dev.chromium.org/developers/design-documents/compositor-thread-architecture) . Это предотвращает вмешательство анимации в AMP и [процесс рендеринга](https://developers.google.com/web/updates/2018/09/inside-browser-part3#javascript_can_block_the_parsing) браузера.
+Хотя CSS позволяет переходить из одного состояния в другое с помощью переходов, для реализации [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) вы должны объявить свойства анимации как ключевые кадры (аналогично [CSS-анимации](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations)). Чтобы обеспечить плавное воспроизведение и совместимость с различными браузерами, [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) позволяет использовать в ключевых кадрах только [ограниченный набор свойств](../../../../documentation/components/reference/amp-animation.md#allow-listed-properties-for-keyframes) — а именно, свойств, которые задействуют аппаратное ускорение графического процессора, не вызывают обновление макета и могут анимироваться в [потоке композитора](https://dev.chromium.org/developers/design-documents/compositor-thread-architecture). Это предотвращает возникновение конфликтов анимации с AMP и [процессом рендеринга](https://developers.google.com/web/updates/2018/09/inside-browser-part3#javascript_can_block_the_parsing) браузера.
 
-[tip type="note"] Ключевые кадры либо определены непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) либо на них имеются ссылки из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) если они соответствуют ограничениям свойств. Подробнее [о ключевых кадрах в `amp-animation`](../../../../documentation/components/reference/amp-animation.md#keyframes) . [/tip]
+[tip type="note"] Ключевые кадры либо определяются непосредственно в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md), либо извлекаются из [`<amp style-keyframe>`](../../../../documentation/guides-and-tutorials/learn/spec/amphtml.md#keyframes-stylesheet) посредством ссылок — при условии, что они соблюдают ограничения, установленные для свойств. Подробнее [о ключевых кадрах в компоненте `amp-animation` читайте здесь](../../../../documentation/components/reference/amp-animation.md#keyframes). [/tip]
 
-### Вызывать
+### Триггер
 
-Триггер запускает последовательность анимации. Расширение [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) запускается либо тогда, когда `<body>` становится видимым на странице, либо при подключении его к [действию или событию AMP.](../../../../documentation/guides-and-tutorials/learn/amp-actions-and-events.md)
+Триггер запускает анимацию. Расширение [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) запускается либо когда элемент `<body>` становится видимым на странице, либо при подключении его к [действию или событию AMP](../../../../documentation/guides-and-tutorials/learn/amp-actions-and-events.md).
 
-Запуск по видимости `<body>` полезен, когда анимация должна запускаться сразу после загрузки страницы, потому что она отображается «над сгибом» или в первом окне просмотра страницы. Анимация запускается через видимость при добавлении `trigger="visibility"` в качестве атрибута к компоненту.
+Запуск при отображении элемента `<body>` полезен, если вы хотите запускать анимацию сразу же после загрузки страницы (если анимация располагается в изначально видимой области страницы). Чтобы запускать анимации таким образом, добавьте в компонент атрибут `trigger="visibility"`.
 
 ```
 <amp-animation layout="nodisplay"
@@ -68,7 +68,7 @@ author: CrystalOnScript
 </amp-animation>
 ```
 
-Анимации подключаются к действию или событию, присваивая компоненту [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) `id` и связывая этот `id` с желаемым триггером события, например, нажав кнопку.
+Чтобы подключить анимации к действию или событию, назначьте `id` компоненту [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) и свяжите этот `id` с нужным триггером события — например, с нажатием кнопки.
 
 ```
 <amp-animation layout="nodisplay" id="exampleAnimation">
@@ -80,11 +80,11 @@ author: CrystalOnScript
 
 ## Создание сложных анимаций
 
-Создание анимации в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) позволяет осуществлять точный контроль, который выходит за рамки запуска и остановки анимации: он также может приостанавливать, реверсировать и направлять к определенной точке. Вы даже можете связать несколько анимаций вместе и анимировать элементы в последовательности.
+Создание анимации в [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) позволяет осуществлять детальный контроль, выходящий за рамки запуска и остановки анимации: приостанавливать, воспроизводить в обратную сторону и «перескакивать» к определенной точке. Вы можете даже создавать последовательность из нескольких анимаций и анимировать элементы один за другим.
 
 ### Подцели
 
-Элементы одного и того же тега или класса могут иметь указанные временные свойства и переопределять значения переменных, определенных в анимации верхнего уровня.
+Элементы одного тега или класса могут определять свои свойства воспроизведения, тем самым переопределяя значения переменных, определенных в анимации верхнего уровня.
 
 [example preview="top-frame" playground="true" imports="amp-animation"]
 
@@ -123,9 +123,9 @@ author: CrystalOnScript
 
 [/example]
 
-### Цепные анимации
+### Последовательности анимаций
 
-Несколько анимаций могут соединяться вместе, образуя большую последовательность. Вы можете создавать синхронизированные эффекты, такие как накладки на видео, написав анимацию в `animations` массиве внутри [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) компоненты.
+Несколько анимаций можно соединять вместе, формируя длинную последовательность. Путем записи анимаций в массив `animations` внутри компонента [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) вы можете создавать синхронизированные эффекты, такие как эффекты наложения на видео.
 
 ```
 <amp-animation id="overlaysAnim" layout="nodisplay">
@@ -159,9 +159,9 @@ author: CrystalOnScript
 </amp-animation>
 ```
 
-Эта установка воспроизводит каждую анимацию в течение 3 секунд в последовательности.
+Данный код воспроизводит каждую анимацию в течение 3 секунд в последовательном порядке.
 
-Для более крупных анимаций анимации внутри массива `animations` могут ссылаться на другие компоненты [`amp-animation`](../../../../documentation/components/reference/amp-animation.md) .
+Для создания больших анимаций расположенные внутри массива `animations` анимации могут ссылаться на другие компоненты [`amp-animation`](../../../../documentation/components/reference/amp-animation.md).
 
 ```
 <amp-animation id="addEnergy" layout="nodisplay">
@@ -209,7 +209,7 @@ author: CrystalOnScript
 
 ### Анимация неизвестного количества элементов
 
-Используя [выражения `var()` и `calc()`](../../../../documentation/components/reference/amp-animation.md) вместе с [расширениями CSS](../../../../documentation/components/reference/amp-animation.md#css-extensions) , вы можете писать сложные и синхронизированные анимации, которые работают с любым количеством элементов. Это позволяет легко и плавно анимировать динамические и пользовательские данные.
+Используя [выражения `var()` и `calc()`](../../../../documentation/components/reference/amp-animation.md) вместе с [расширениями CSS](../../../../documentation/components/reference/amp-animation.md#css-extensions), вы можете создавать сложные и синхронизированные анимации, работающие с любым количеством элементов. Это позволяет легко и плавно анимировать динамические и созданные пользователем данные.
 
 [example preview="top-frame" playground="true"]
 
@@ -261,22 +261,22 @@ author: CrystalOnScript
 </body>
 ```
 
-[/example] This example works by:
+[/example] Рассмотрим, что делает этот пример:
 
-- Объявление переменной `--duration` и присвоение ей значения двух секунд.
-- Sets the `duration` to the var `--duration`'s value.
-- Вычисляет задержку, применяемую к каждому элементу, который соответствует `.card` селектора.
-    1. Расширение [`length()`](../../../../documentation/components/reference/amp-animation.md#css-length()-extension) вычисляет, сколько элементов `.card` было выбрано.
-    2. The length then subtracts each `.card`'s [index()](../../../../documentation/components/reference/amp-animation.md#css-index()-extension)
+- Объявляет переменную `--duration` и присваивает ей значение «две секунды».
+- Назначает `duration` значение переменной `--duration`.
+- Вычисляет задержку, применяемую ко всем элементам, соответствующим стилю `.card` селектора.
+    1. Расширение [`length()`](../../../../documentation/components/reference/amp-animation.md#css-length()-extension) вычисляет, сколько элементов `.card` было выбрано
+    2. После этого length вычитает [index()](../../../../documentation/components/reference/amp-animation.md#css-index()-extension) каждого элемента `.card`
     3. Полученное значение умножается на `--duration`
-    4. Окончательная сумма применяется в секундах к задержке этого элемента.
-- Анимация применяется к каждому элементу индивидуально, так что карты перемешиваются одна за другой, а не все одновременно.
+    4. Окончательная сумма задается как значение задержки данного элемента в секундах
+- Анимация применяется к каждому элементу индивидуально, так что карты перетасовываются одна за другой, а не все одновременно.
 
-Откройте анимацию на игровой площадке AMP и добавьте дополнительные элементы [`amp-img`](../../../../documentation/components/reference/amp-img) чтобы проверить это поведение.
+Откройте анимацию в песочнице AMP и добавьте дополнительные элементы [`amp-img`](../../../../documentation/components/reference/amp-img), чтобы протестировать это поведение.
 
-### Отлично выглядеть везде
+### Как обеспечить лучший вид
 
-Анимация может включать [`conditions`](../../../../documentation/components/reference/amp-animation.md#conditions) , позволяющие настраивать эффекты. Адаптируйте анимацию к любому размеру экрана с помощью [условия `media`](../../../../documentation/components/reference/amp-animation.md#media-query) и поддерживает обратную совместимость с браузером, включив [условия `supports`](../../../../documentation/components/reference/amp-animation.md#supports-condition) в операторе [`switch`](../../../../documentation/components/reference/amp-animation.md#animation-switch-statement) .
+Для индивидуальной настройки анимаций в них можно включать специальные [`условия`](../../../../documentation/components/reference/amp-animation.md#conditions). Адаптируйте анимацию к любому размеру экрана с помощью [условия `media`](../../../../documentation/components/reference/amp-animation.md#media-query) и поддерживайте обратную совместимость с браузерами, включая [условия `supports`](../../../../documentation/components/reference/amp-animation.md#supports-condition) в оператор [`switch`](../../../../documentation/components/reference/amp-animation.md#animation-switch-statement).
 
 [example preview="top-frame" playground="true"]
 
