@@ -2,7 +2,7 @@
 $title: Создание UI-виджета с помощью пользовательского кода JavaScript
 $order: 101
 formats:
-- сайты
+- websites
 tutorial: true
 author:
 - morsssss
