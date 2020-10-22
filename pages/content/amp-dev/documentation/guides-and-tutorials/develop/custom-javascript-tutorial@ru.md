@@ -2,11 +2,11 @@
 $title: Создание UI-виджета с помощью пользовательского кода JavaScript
 $order: 101
 formats:
-- websites
+  - websites
 tutorial: true
 author:
-- morsssss
-- CrystalOnScript
+  - morsssss
+  - CrystalOnScript
 description: Для веб-ресурсов, требующих высокой степени настройки, был создан amp-script — компонент, позволяющий применять на AMP-странице произвольный код JavaScript, не оказывающий негативного влияния на ее производительность.
 ---
 
