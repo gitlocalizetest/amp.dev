@@ -1,3 +1,16 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: ampdev\n"
+"X-Crowdin-Project-ID: 387885\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: messages.po\n"
+"X-Crowdin-File-ID: 80339\n"
+"Project-Id-Version: ampdev\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"PO-Revision-Date: 2020-10-23 12:17\n"
 
 #: /views/partials/case-band.j2:6 /views/partials/case-band.j2:7
 msgid "A screenshot of a website using AMP."
@@ -2523,7 +2536,7 @@ msgstr "AMP 电子邮件工作小组会将<strong>季度路线图</strong>以标
 
 #: /content/amp-dev/index.html:289
 msgid "AMP is an open-source HTML framework that provides a straightforward way to create web pages that are fast, smooth-loading and prioritize the user-experience above all else. Can't believe it? Try it out for yourself in the playground below:"
-msgstr "AMP 是一个开放源代码 HTML 框架，能够直接创建快速、平稳加载的网页，并将用户体验\\n放在首位。不敢相信？在下面的 Playground 中亲自体验："
+msgstr "AMP 是一个开放源代码 HTML 框架，能够直接创建快速、平稳加载的网页，并将用户体验<br>放在首位。不敢相信？在下面的 Playground 中亲自体验："
 
 #: /content/amp-dev/about/ads.html:59
 msgid "AMP is fundamentally changing the way ads are built, delivered and measured on the web, making them faster and minimizing disruptions for users. This increases viewability and click-through rates to improve monetization, making everyone happy: users, publishers and advertisers alike."
@@ -3122,3 +3135,4 @@ msgstr "支持的平台、供应商与合作伙伴"
 
 msgid "AMP Conf 2020: Save the date!"
 msgstr "AMP Conf 2020：按时出席！"
+
