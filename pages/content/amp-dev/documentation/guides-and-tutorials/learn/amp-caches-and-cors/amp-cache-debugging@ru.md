@@ -2,9 +2,9 @@
 $title: Диагностика проблем с AMP-кешем
 order: 8
 formats:
-- сайты
-- истории
-- реклама
+- websites
+- stories
+- ads
 teaser:
   text:  Почему мой документ «ломается» в AMP-кеше?
 ---
