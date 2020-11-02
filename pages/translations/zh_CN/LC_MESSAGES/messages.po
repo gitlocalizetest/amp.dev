@@ -1,4 +1,3 @@
-
 #: /views/partials/case-band.j2:6 /views/partials/case-band.j2:7
 msgid "A screenshot of a website using AMP."
 msgstr "一张使用 AMP 的网站的屏幕截图。"
