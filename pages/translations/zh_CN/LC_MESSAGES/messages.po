@@ -1126,7 +1126,7 @@ msgstr "使用 AMP 为网页和故事构建并投放闪电般快速、安全的�
 
 #: /content/amp-dev/index.html:30
 msgid "Use AMP to send interactive, dynamic emails."
-msgstr "使用 AMP 发送互动式、动态 <br> 电子邮件。"
+msgstr "使用 AMP 发送互动式、动态<p>电子邮件。"
 
 #: /content/amp-dev/index.html:31
 msgid "Whether you are a publisher, e-commerce company, storyteller, advertiser or email sender, AMP makes it easy to create great experiences on the web. Use AMP to build:"
